@@ -1,0 +1,60 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+}
+
+.login-page {
+    background-color: white ;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 510px;
+    box-shadow: 0px 0px 4px rgb(220, 212, 212);
+}
+
+.login-head {
+    font-size: 28px;
+    color: #0F4C81 ;
+    margin-bottom: 20px;
+}
+
+.login-input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+.login-input:focus {
+    border-color: #4CAF50;
+}
+
+.login-btn {
+    background-color: #4CAF50 ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 32px;
+    margin-top: 5px;
+}
+
+.login-btn:hover {
+    background-color: #147703;
+}
+
+.reg-details{
+    margin-top: 15px;
+    font-size: 12px;
+}
