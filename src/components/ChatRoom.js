@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
-import './ChatRoom.css'; 
+import './ChatRoom.css';
 
 const socket = io('https://chatapp-backend-1-j2pl.onrender.com');
 
@@ -86,14 +86,14 @@ function ChatRoom() {
           <button onClick={joinRoom} className='join-btn'>Join Room</button>
         </div>
         <div className="user-list">
-            <h3>Active Users</h3>
-            {users.length > 0 && (
+          <h3>Active Users</h3>
+          {users.length > 0 && (
             <ul>
               {users.map((user) => (
-              <li key={user.id}>{user.username}</li>
+                <li key={user.id}>{user.username}</li>
               ))}
             </ul>
-            )}
+          )}
         </div>
         <div className="message-list" ref={messageListRef}>
           <ul>
@@ -101,7 +101,7 @@ function ChatRoom() {
               <li key={index} className={msg.username === username ? 'sent' : 'received'}>
                 <div className={`message-box ${msg.username === username ? 'sent' : 'received'}`}>
                   <p className='username-msg'>{msg.username}</p>
-                  <p>{msg.message}</p>
+                  <p className='user-msg'>{msg.message}</p>
                 </div>
               </li>
             ))}

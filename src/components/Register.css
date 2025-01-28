@@ -1,43 +1,62 @@
+/* Outer container for centering the form */
 .register-content {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url(https://images.unsplash.com/photo-1471970471555-19d4b113e9ed?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
+    padding: 20px;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 }
 
+/* Cool background animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Register form container */
 .register-container {
-    background-color: white ;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 510px;
-    box-shadow: 0px 0px 12px rgb(220, 212, 212);
+    max-width: 500px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Header styles */
 .reg-head {
-    font-size: 28px;
-    color: #0F4C81;
+    font-size: 26px;
+    color: #003366;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-label{
-    font-size: 11px;
+/* Input field labels */
+label {
+    font-size: 14px;
     font-weight: bold;
-    color: #0F4C81;
+    color: #003366;
+    margin-bottom: 5px;
+    display: block;
 }
-.reg-input{
+
+/* Input fields */
+.reg-input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 12px;
+    border-radius: 6px;
+    font-size: 14px;
     outline: none;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    background-color: #f8f9fa;
 }
 
 .reg-input:focus {
@@ -46,17 +65,44 @@ label{
 
 /* Submit button */
 .reg-btn {
-    background-color: #1777dd ;
+    width: 100%;
+    padding: 12px;
+    background-color: #1d72b8;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-    height: 32px;
-    margin-top: 5px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #0a61be;
+.reg-btn:hover {
+    background-color: #145a86;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .register-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .reg-head {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .reg-input {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .reg-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
