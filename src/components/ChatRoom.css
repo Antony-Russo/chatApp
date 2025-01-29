@@ -204,13 +204,12 @@
   cursor: pointer;
   font-size: 14px;
   width: 15%;
+  font-weight: bold;
 }
 
 .send-btn:hover {
-  background-color: white;
-  color: rgb(44, 175, 44);
+  border-radius: 20px;
   font-weight: bold;
-  border: 2px solid rgb(44, 175, 44);
 }
 
 /* Mobile specific styles */
